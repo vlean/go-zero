@@ -17,10 +17,15 @@ const (
 	headerTagKey = "header"
 )
 
+func pathToFuncName(name string) string {
+	name = strings.Replace(name, "v1/", "", 1)
+	return lowCamelCase(name)
+}
 func normalizeHandlerName(handlerName string) string {
 	handler := strings.Replace(handlerName, "Handler", "", 1)
-	handler = lowCamelCase(handler)
-	return handler
+	//handler = lowCamelCase(handler)
+	return util.ToCamelCase(util.ToSnakeCase(handler))
+	//return handler
 }
 
 func lowCamelCase(s string) string {

@@ -17,6 +17,7 @@ var funcMap = template.FuncMap{
 	"getCoreType":                     getCoreType,
 	"lowCamelCase":                    lowCamelCase,
 	"normalizeHandlerName":            normalizeHandlerName,
+	"pathToFuncName":                  pathToFuncName,
 	"hasUrlPathParams":                hasUrlPathParams,
 	"extractPositionalParamsFromPath": extractPositionalParamsFromPath,
 	"makeDartRequestUrlPath":          makeDartRequestUrlPath,
